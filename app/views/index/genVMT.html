@@ -4,6 +4,7 @@
 function displayResultAA() { 
 document.getElementById("AA").innerHTML = "Enjoy the AA Sacred Page";
 }
+
 </script>
 
 
@@ -207,3 +208,36 @@ function displayResultZZ() {
 document.getElementById("ZZ").innerHTML = "Enjoy the ZZ Sacred Page";
 }
 </script>
+
+
+
+<!-- Scope Chain -->
+
+
+<h5 id="AZ">SC</h5>
+<button onclick="displayResultAZ()">SC</button>
+
+<script>
+function displayResultAZ(AZ) { 
+  function aA() {
+  document.getElementById("AZ").innerHTML = "Enjoy the ZZ Sacred Page";
+  { } 
+window.alert("aA");
+if (doAZ) aA();
+}
+
+function bB()
+  { 
+window.alert("bB");
+if (doAZ) bB();
+}
+
+
+}
+
+
+
+</script>
+
+
+
